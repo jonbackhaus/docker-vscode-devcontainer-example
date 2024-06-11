@@ -1,0 +1,26 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+{
+  "name": "Devcontainer",
+  //   "image": "mcr.microsoft.com/vscode/devcontainers/python:3.11-bullseye",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      //
+      // container build arguments
+      // TODO: override/replace with your base image, image tag, and image username
+      //
+      "BASE_IMAGE": "mcr.microsoft.com/vscode/devcontainers/python",
+      "BASE_TAG": "3.11-bullseye",
+      "USERNAME": "vscode"
+    }
+  },
+
+  // TODO: replace with your container username
+  "remoteUser": "vscode",
+
+  // mounts
+  "mounts": [
+    // TODO:  update the target path to match the container username
+    "source=profile,target=/home/vscode,type=volume"
+  ]
+}
